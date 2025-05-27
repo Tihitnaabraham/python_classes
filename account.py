@@ -2,7 +2,7 @@ class Account:
     def __init__(self,name):
         self.name=name
         self.balance=200
-        self.deposite=[]
+        self.deposits=[]
         self.withdraws=[]
         self.transfer=[]
         self.minimum_balance= 100
@@ -13,7 +13,7 @@ class Account:
 # Deposit: method to deposit funds, store the deposit and return a message with the new balance to the customer. It should only accept positive amounts.
     
     def deposit(self,amount):
-        self.deposite.append(amount)
+        self.deposits.append(amount)
         if amount<=0:
             return "deposite amount must be positive"
         else:
@@ -103,6 +103,8 @@ class Account:
         self.balance = 0
         self.loan_amount = 0
         self.loan_repaid = 0
+        self.wirhdraws=[]
+        self.deposits=[]
         return "Account closed. All balances set to zero."
 
 
