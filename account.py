@@ -6,8 +6,8 @@ class Transaction:
         self.amount = amount
         self.transaction_type = transaction_type
 
-    def __report__(self):
-        return f"Transaction({self.date_time.reportftime('%Y-%m-%d %H:%M:%S')} | {self.naration}:  {self.amount} | {self.transaction_type.title() })"
+    def __str__(self):
+        return f"Transaction({self.date_time} | {self.narration}:  {self.amount} | {self.transaction_type.title() })"
 
 
 
